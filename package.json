@@ -1,12 +1,10 @@
 {
-  "name": "covalent",
-  "version": "1.0.0-beta.6",
+  "name": "Orahi Dashboard",
+  "version": "1.0.3",
   "private": true,
-  "description": "Teradata UI Platform built on Angular Material",
+  "description": "",
   "keywords": [
-    "angular",
-    "components",
-    "reusable"
+    "orahi"
   ],
   "scripts": {
     "e2e": "protractor",
@@ -36,55 +34,44 @@
     "node": ">=6.11.1 < 7",
     "npm": ">3"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/teradata/covalent.git"
-  },
-  "bugs": {
-    "url": "https://github.com/teradata/covalent/issues"
-  },
-  "license": "MIT",
-  "author": "Teradata UX",
-  "contributors": [
-    "Kyle Ledbetter <kyle.ledbetter@teradata.com>",
-    "Richa Vyas <richa.vyas@teradata.com>",
-    "Ed Morales <eduardo.morales@teradata.com>",
-    "Jason Weaver <jason.weaver@teradata.com>",
-    "Jeremy Wilken <jeremy.wilken@teradata.com>",
-    "Jeremy Smartt <jeremy.smartt@teradata.com>",
-    "Ilsun Park <ilsun.park@teradata.com>",
-    "Steven Ov <steven.ov@teradata.com>"
-  ],
   "dependencies": {
-    "@angular/animations": "^4.2.0",
+    "@agm/core": "^1.0.0-beta.1",
+    "@angular/animations": "^4.3.6",
     "@angular/cdk": "2.0.0-beta.8",
-    "@angular/common": "^4.2.0",
-    "@angular/compiler": "^4.2.0",
-    "@angular/core": "^4.2.0",
-    "@angular/forms": "^4.2.0",
-    "@angular/http": "^4.2.0",
+    "@angular/common": "^4.3.6",
+    "@angular/compiler": "^4.3.6",
+    "@angular/core": "^4.3.6",
+    "@angular/forms": "^4.3.6",
+    "@angular/http": "^4.3.6",
     "@angular/material": "2.0.0-beta.8",
-    "@angular/platform-browser": "^4.2.0",
-    "@angular/platform-browser-dynamic": "^4.2.0",
-    "@angular/platform-server": "^4.2.0",
-    "@angular/router": "^4.2.0",
+    "@angular/platform-browser": "^4.3.6",
+    "@angular/platform-browser-dynamic": "^4.3.6",
+    "@angular/platform-server": "^4.3.6",
+    "@angular/router": "^4.3.6",
     "@covalent/code-editor": "^1.0.0-beta.1",
+    "@covalent/core": "^1.0.0-beta.6",
+    "@covalent/dynamic-forms": "^1.0.0-beta.6",
+    "@covalent/highlight": "^1.0.0-beta.6",
+    "@covalent/http": "^1.0.0-beta.6",
+    "@covalent/markdown": "^1.0.0-beta.6",
     "@covalent/text-editor": "^1.0.0-alpha.4",
     "@ngx-translate/core": "7.0.0",
     "@ngx-translate/http-loader": "0.1.0",
     "@swimlane/ngx-charts": "5.3.1",
+    "angular2-datatable": "^0.6.0",
     "core-js": "^2.4.1",
     "d3": "^4.4.0",
     "hammerjs": "^2.0.8",
     "highlight.js": "9.11.0",
+    "ng2-img-cropper": "^0.9.0",
     "rxjs": "^5.2.0",
     "showdown": "1.6.4",
     "web-animations-js": "2.2.5",
     "zone.js": "0.8.12"
   },
   "devDependencies": {
-    "@angular/cli": "1.2.7",
-    "@angular/compiler-cli": "^4.2.0",
+    "@angular/cli": "^1.3.2",
+    "@angular/compiler-cli": "^4.3.6",
     "@types/fs-extra": "^4.0.0",
     "@types/hammerjs": "^2.0.30",
     "@types/jasmine": "2.5.38",
@@ -102,6 +89,7 @@
     "gulp-sourcemaps": "1.6.0",
     "gulp-typescript": "3.1.4",
     "gulp-util": "3.0.7",
+    "html-webpack-plugin": "^2.30.1",
     "jasmine-core": "~2.5.2",
     "karma": "~1.4.1",
     "karma-chrome-launcher": "~2.0.0",
@@ -122,6 +110,8 @@
     "semver": "5.2.0",
     "ts-node": "~2.0.0",
     "tslint": "5.2.0",
-    "typescript": "2.3.2"
+    "typescript": "^2.4.2",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
   }
 }

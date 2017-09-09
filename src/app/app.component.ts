@@ -9,11 +9,11 @@ import { getSelectedLanguage } from './utilities/translate';
 import { getDirection } from './utilities/direction';
 
 @Component({
-  selector: 'docs-covalent',
+  selector: 'orahi-d',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class DocsAppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewInit {
 
   routes: Object[] = [{
       icon: 'library_books',

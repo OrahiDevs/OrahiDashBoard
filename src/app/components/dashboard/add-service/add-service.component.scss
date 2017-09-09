@@ -1,0 +1,83 @@
+
+$orahi: #FF6C00;
+$oblack:#272223;
+$deepred:#FF4200;
+$ored:#FF3500;
+$ogray:#F3F0F1;
+
+.ng-valid[required], .ng-valid.required, md-input-container{
+    color: $oblack;
+  }
+  
+  .ng-invalid:not(md-input-container){
+    color:$deepred;
+  }
+  
+  md-select .placeholder{
+    text-align: right;
+  }
+  
+  md-select{
+    margin-bottom: 0.6em;
+    width:100%;
+    text-align: left;
+  }
+  
+  #sp-container{
+      padding-top: 1.5em;
+  }
+  
+  md-card{
+      margin: auto; 
+      padding: 3em 3em 2.5em 3em; 
+      width: max-content; 
+  }
+  
+  md-card-title{
+      padding: 0.5em 1.5em 0 1.5em;
+  }
+  
+  md-card-content{
+      padding: 0.1em 1.5em 0 1.5em;
+  }
+  
+  md-input-container{
+      width: 100%;
+  }
+  
+  #submit-container{
+      padding-top: 1.5em;
+  }
+  
+  button{
+      width: 100%; 
+      background-color:$oblack; 
+      color: $ogray;
+  }
+  
+  md-card-footer{
+      padding-top: 1.5em; 
+      padding-bottom: 1.5em;
+  }
+  
+  a{
+      color:$oblack;
+      text-decoration: none;
+  }
+  
+  a:hover{
+      color: $orahi;
+      text-decoration: underline;
+  }
+  
+  md-hint{
+    color: $orahi;
+  }
+  
+  .sebm-google-map-container {
+    height: 300px;
+  }
+  
+  canvas{
+      display: block!important;
+  }

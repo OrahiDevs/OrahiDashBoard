@@ -1,0 +1,89 @@
+<div layout="row" layout-align="start center" class="pad-left-sm pad-right-sm">
+  <span *ngIf="!searchBox.searchVisible" class="push-left-sm">
+    <span class="md-title">Receipts</span>
+  </span>
+  <span *ngIf="!searchBox.searchVisible" class="push-left-sm">
+    <span *ngIf="(selectable && !selectedRows.length) || !selectable" class="md-title">Receipts</span>
+    <span *ngIf="selectedRows.length && selectable" class="md-body-1">0 item(s) selected</span>
+  </span>
+  <td-search-box #searchBox backIcon="arrow_back" class="push-right-sm" placeholder="Search here" (searchDebounce)="search($event)" flex>
+  </td-search-box>
+</div>
+<md-divider></md-divider>
+<td-data-table
+  #dataTable
+  [data]="filteredData" 
+  [columns]="columns"
+  [selectable]="selectable"
+  [clickable]="clickable"
+  [multiple]="multiple"
+  [sortable]="true"
+  [sortBy]="sortBy"
+  [(ngModel)]="selectedRows"
+  [sortOrder]="sortOrder"
+  (sortChange)="sort($event)">
+</td-data-table>
+<div class="md-padding" *ngIf="!dataTable.hasData" layout="row" layout-align="center center">
+  <h3>No results to display.</h3>
+</div>
+<td-paging-bar #pagingBar [pageSize]="pageSize" [total]="filteredTotal" (change)="page($event)">
+  <span hide-xs>Rows per page:</span>
+  <md-select [style.width.px]="50" [(ngModel)]="pageSize">
+    <md-option *ngFor="let size of [5,10,15,20]" [value]="size">
+      {{size}}
+    </md-option>
+  </md-select>
+  {{pagingBar.range}} <span hide-xs>of {{pagingBar.total}}</span>
+</td-paging-bar>
+
+<!-- <div layout="row">
+  <div flex>
+    <table style="margin:auto;" class="table table-striped pad-top pad-bottom" [mfData]="spReceiptsList" #mf="mfDataTable" [mfRowsOnPage]="3">
+      <thead class="pad md-title">
+      <tr>
+          <th >
+              <mfDefaultSorter by="approve"> <div >APPROVE</div></mfDefaultSorter>
+              <hr>
+          </th>
+          <th >
+              <mfDefaultSorter by="serviceName"> <div>SERVICE NAME</div></mfDefaultSorter>
+              <hr>
+          </th>
+          <th >
+              <mfDefaultSorter by="userName"> <div>USER NAME</div></mfDefaultSorter>
+              <hr>
+          </th>
+          <th >
+              <mfDefaultSorter by="amount" ><div >AMOUNT</div></mfDefaultSorter>
+              <hr>
+          </th>
+          <th >
+              <mfDefaultSorter by="payment_date" ><div>PAYMENT DATE</div></mfDefaultSorter>
+              <hr>
+          </th>
+          
+      </tr>
+      </thead>
+      
+      
+      <tbody>
+          
+      <tr *ngFor="let item of mf.data">
+          <td style="background: white"><input type="checkbox" value="{{item.approve}}"/></td>
+          <td style="background: white">{{item.service.serviceName}}</td>
+          <td style="background: white">{{item.user.name}}</td>
+          <td style="background: white">{{item.rate}}</td>
+          <td style="background: white">{{item.paymentDate}}</td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+          <td colspan="4">
+              <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+          </td>
+      </tr>
+      </tfoot>
+    </table>
+  </div>
+</div> -->
+
