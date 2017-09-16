@@ -1,5 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 
+import { CanActivateGuard } from './guards/router.guard';
 import { SelectivePreloadingStrategyService } from './services';
 import { SigninComponent } from "./components/auth/signin/signin.component";
 import { SignupComponent } from "./components/auth/signup/signup.component";
@@ -23,6 +24,7 @@ const routes: Routes = [
   },{
     component: NavComponent,
     path: 'dashboard',
+    canActivate:[CanActivateGuard],
     children:[
       { path: '', redirectTo:'dashboard', pathMatch: 'full'},
       { path: 'dashboard', component:NavComponent },

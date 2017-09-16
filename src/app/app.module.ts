@@ -58,6 +58,9 @@ import { PagenotfoundComponent } from './components/dashboard/pagenotfound/pagen
 import { AccountsettingsComponent } from './components/dashboard/accountsettings/accountsettings.component';
 import {DataTableModule} from "angular2-datatable";
 
+// Guards
+import { Permissions, CanActivateGuard } from './guards/router.guard';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -132,10 +135,12 @@ import {DataTableModule} from "angular2-datatable";
     AddServiceCategoryService,
     AddServiceService,
     AuthService,
+    CanActivateGuard,
     CategoriesService,
     GetReceiptsService,
     GetServiceCategoryService,
     GetServiceService,
+    Permissions,
     RegxService,
     WebapiService,
     NavMenuService
